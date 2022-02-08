@@ -1,0 +1,29 @@
+{
+  "name": "hac-infra",
+  "version": "0.0.1",
+  "description": "HAC Infrastructure Plugin",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config config/prod.webpack.config.js",
+    "start": "REMOTE_CONFIG=stage BETA=true PROXY=true webpack serve --config config/dev.webpack.config.js",
+    "test": "jest",
+    "start:federated": "BETA=true fec static --config config/dev.webpack.config.js"
+  },
+  "dependencies": {
+    "@patternfly/react-core": "^4.175.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@redhat-cloud-services/frontend-components-config": "^4.5.6",
+    "@redhat-cloud-services/frontend-components-config-utilities": "^1.5.9",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.2",
+    "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "insights": {
+    "appname": "hac-infra"
+  },
+  "license": "Apache-2.0",
+  "private": true
+}
